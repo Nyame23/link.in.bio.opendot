@@ -41,34 +41,77 @@
     </script>
     
     <style>
-      body {
-        overflow: hidden;
-        margin: 0; /* Remove default margin */
-        padding: 0; /* Remove default padding */
-      }
-      #skyline-video {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1;
-      }
-      main {
-        padding: 2em; /* Add padding to main content */
-      }
-      ul {
-        list-style: none; /* Remove default list styles */
-        padding: 0; /* Remove default padding */
-      }
-      li {
-        margin-bottom: 1em; /* Add spacing between list items */
-      }
-      img {
-        max-width: 100%; /* Make images responsive */
-        height: auto;
-      }
+     body {
+  margin: 0;
+  padding: 0;
+}
+
+#skyline-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#vanta {
+  z-index: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 480px;
+  width: 100%;
+}
+
+li {
+  margin-bottom: 1em;
+  background-color: rgba(187, 184, 184, 0.514);
+  backdrop-filter: blur(10px) saturate(160%) contrast(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(160%) contrast(180%);
+  border-radius: 10px;
+  box-shadow: rgb(28 32 93 / 24%) 0px 2px 8px 0px;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    padding: 1em;
+  }
+
+  ul {
+    max-width: none;
+  }
+}
+    
+
     </style>
   </head>
   <body>
@@ -111,7 +154,7 @@
         </li>
         <li>
           <a
-            href="https://www.instagram.com/skyline.webservice/?igsh=YTQwZjQ0NmI0OA%3D%3D"
+            href="https://www.instagram.com/opendot.solutions/"
           >
             <img
               src="{% static 'website/images/instagram.svg' %}"
@@ -146,7 +189,7 @@
           </a>
         </li>
         <li>
-          <a href="https://www.snapchat.com/add/skylnwbsrvc?invite_id=AY3s7sdu&locale=en_GH&share_id=3jTMV4FNTvyZuVgqA67hZQ&sid=cbe3dfbd1cdf4dc2a817222b2e0c78ef">
+          <a href="https://www.snapchat.com/add/opendotsolution?share_id=rQ9W-xzu7Sw&locale=en-GB">
             <img
               src="{% static 'website/images/snapchat.svg' %}"
               alt="Wallpapers"
@@ -173,6 +216,16 @@
               width="20"
             />
             GitHub
+          </a>
+        </li>
+        <li>
+          <a href="http://www.linkedin.com/in/opendot-solutions-995233304">
+            <img
+              src="{% static 'website/images/linkedin.svg' %}"
+              alt="Linkden"
+              width="20"
+            />
+            Linkedin
           </a>
         </li>
       </ul>
